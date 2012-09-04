@@ -27,7 +27,7 @@ describe User do
     let(:found_user) { User.find_by_email(@user.email) }
 
     describe "with valid password" do
-      it { should == found_user.authenticate(@user.password) }
+      it { should == found_user.authenticate(@user.password) } # warum geht das? authenticate gibt doch bei erfolg user objekt zurück
     end
 
     describe "with invalid password" do
