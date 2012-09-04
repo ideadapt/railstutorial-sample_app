@@ -41,4 +41,17 @@ describe "Static pages" do
                                 :text => "Ruby on Rails Tutorial Sample App | About Us")
     end
   end
+
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "About"
+    page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App | About Us"
+    click_link "Help"
+    page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App | Help"
+    click_link "Home"
+    click_link "Sign in"
+    page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App | Sign up"
+    click_link "sample app"
+    page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App"
+  end
 end
