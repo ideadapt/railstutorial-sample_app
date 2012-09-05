@@ -49,7 +49,7 @@ describe "Static pages" do
     click_link "Help"
     page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App | Help"
     click_link "Home"
-    click_link "Sign in"
+    click_link "Sign up"
     page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App | Sign up"
     click_link "sample app"
     page.should have_selector 'title', text: "Ruby on Rails Tutorial Sample App"
